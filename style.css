@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.slider {
+  width: 100%;
+  max-width: 1000px;
+  height: 70vh;
+  position: relative;
+  margin: auto;
+  overflow: hidden; /* <===  */
+  border-radius: 15px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  width: max-content;
+  transition: 0.5s;
+}
+
+.item img {
+  display: block;
+  width: 1000px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.dots li.active {
+  width: 30px;
+}
